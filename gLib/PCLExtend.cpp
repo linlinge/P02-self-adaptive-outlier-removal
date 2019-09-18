@@ -1,4 +1,4 @@
-#include "pcl_expansion.h"
+#include "PCLExtend.h"
 double ComputeMeanDistance(const pcl::PointCloud<PointType>::ConstPtr cloud)
 {
 	double res = 0.0;

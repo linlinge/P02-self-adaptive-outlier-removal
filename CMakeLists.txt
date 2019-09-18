@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
-project(pcl_demo)
+project(self_adaptive_outlier_removal)
 
 # PCL
 find_package(PCL 1.2 REQUIRED)
@@ -18,16 +18,15 @@ include_directories(${CERES_INCLUDE_DIRS})
 include_directories(gLib .)
 ADD_SUBDIRECTORY(gLib)
 
-add_executable (pcl_demo main.cpp surface_fitting.cpp pcl_expansion.cpp)
-
+add_executable (self_adaptive_outlier_removal main.cpp euclidean_distance.cpp)
 # PCL
-target_link_libraries (pcl_demo ${PCL_LIBRARIES})
+target_link_libraries (self_adaptive_outlier_removal ${PCL_LIBRARIES})
 
 # OpenCV
-target_link_libraries(pcl_demo ${OpenCV_LIBS})
+target_link_libraries(self_adaptive_outlier_removal ${OpenCV_LIBS})
 
 # Ceres
-target_link_libraries(pcl_demo ${CERES_LIBRARIES})
+target_link_libraries(self_adaptive_outlier_removal ${CERES_LIBRARIES})
 
 #gLib
-target_link_libraries(template-cmake GLIB)
+target_link_libraries(self_adaptive_outlier_removal GLIB)

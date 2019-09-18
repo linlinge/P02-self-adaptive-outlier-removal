@@ -9,6 +9,3 @@
 
 typedef pcl::PointXYZRGBA PointType;
 double ComputeMeanDistance(const pcl::PointCloud<PointType>::ConstPtr cloud);
-
-
-
