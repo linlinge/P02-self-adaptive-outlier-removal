@@ -6,7 +6,7 @@
 Step 01: Install PCL
 Download [*PCL source*](https://github.com/PointCloudLibrary/pcl/releases)
 ```c++
-# cd *pcl path*
+# cd pcl-path
 # mkdir build
 # cd build
 # cmake ..
