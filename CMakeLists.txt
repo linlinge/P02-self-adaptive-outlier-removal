@@ -18,7 +18,7 @@ include_directories(${CERES_INCLUDE_DIRS})
 include_directories(gLib .)
 ADD_SUBDIRECTORY(gLib)
 
-add_executable (self_adaptive_outlier_removal main.cpp euclidean_distance.cpp)
+add_executable (self_adaptive_outlier_removal main.cpp euclidean_distance.cpp SurfaceFitting.cpp)
 # PCL
 target_link_libraries (self_adaptive_outlier_removal ${PCL_LIBRARIES})
 

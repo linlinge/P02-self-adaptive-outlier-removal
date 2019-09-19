@@ -36,7 +36,8 @@ void numerial_approach(pcl::PointCloud<PointType>::Ptr cloud)
 		}
 		
 		// step 3: calculate the polynomial
-		Mat P=Poly33(x,y,z);
+		SurfaceFitting sf;
+		Mat P=sf.Poly33(x,y,z);
 		//cout<<P<<endl;
 		
 		// step 4: calculate the distances between points and surface 

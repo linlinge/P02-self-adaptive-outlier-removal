@@ -28,8 +28,3 @@ double ComputeMeanDistance(const pcl::PointCloud<PointType>::ConstPtr cloud)
 	}
 	return res;
 }
-
-
-
-
-

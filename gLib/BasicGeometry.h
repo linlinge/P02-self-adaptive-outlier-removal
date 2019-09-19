@@ -1,8 +1,13 @@
+/*
+	Author: Linlin Ge
+	Dependencies: V3.hpp, OpenCV, Eigen, PCLExtend
+*/
 #pragma once
 #include "V3.hpp"
 #include <iostream>
 #include <Eigen/Core>
 #include <opencv2/opencv.hpp>
+#include <pcl/point_types.h>
 using namespace cv;
 using namespace std;
 
@@ -43,12 +48,10 @@ public:
 	Angle(V3& mid,V3& left,V3& right);
 };
 
-
 // 
 Mat VectorToRotation(V3 orientation_and_arc);
 Mat GetRotationMatrixToAxis(V3 vec, int axis);
 Eigen::MatrixXf MatToMatrixXf(Mat dat);
-
 
 
 /******************************************************************************************************/
@@ -73,6 +76,3 @@ struct CostFunctor
 	
     double p_[10], test_point_[3];    // x,y数据
 };
-
-
-Mat Poly33(Mat& x, Mat& y,Mat& z);
