@@ -16,4 +16,5 @@ Download [*PCL source*](https://github.com/PointCloudLibrary/pcl/releases)
 
 ## Experiments
 * mean distance x  times = voxel resolution, so how about times?
-* 
+
+$$a + b$$
