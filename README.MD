@@ -13,3 +13,7 @@ Download [*PCL source*](https://github.com/PointCloudLibrary/pcl/releases)
 # make
 # make install
 ```
+
+## Experiments
+* mean distance x  times = voxel resolution, so how about times?
+* 

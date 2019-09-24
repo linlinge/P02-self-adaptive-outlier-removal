@@ -110,3 +110,12 @@ void SurfaceFitting::DrawSurface(boost::shared_ptr<pcl::visualization::PCLVisual
 	viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 5, "surface");
 	
 }
+
+double SurfaceFitting::AlgebraicDistacne(double datx, double daty, double datz)
+{
+	double denominator= abs(datz - Calculate(datx,daty));
+	double partial_x=-(P_.at<double>(1,0) + 2*P_.at<double>(3,0)*datx + P_.at<double>(4,0)*daty + 3*P_.at<double>(6,0)*pow(daty,2) + 2*P_.at<double>(7,0)*datx*daty + P_.at<double>(8,0)*pow(daty,2));
+	double partial_y=-(P_.at<double>(2,0) + P_.at<double>(4,0)*datx + 2*P_.at<double>(5,0)*daty + P_.at<double>(7,0)*pow(datx,2) + 2*P_.at<double>(8,0)*datx*daty + 3*P_.at<double>(9,0)*pow(daty,2));
+	double numerator= sqrt(pow(partial_x,2)+pow(partial_y,2)+1);	
+	return denominator/numerator;
+}
